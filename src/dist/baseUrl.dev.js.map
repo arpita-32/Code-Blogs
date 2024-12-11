@@ -1,0 +1,1 @@
+{"version":3,"sources":["baseUrl.js"],"names":["baseUrl"],"mappings":";;;;;;AAAO,IAAMA,OAAO,GAAG,gDAAhB","sourcesContent":["export const baseUrl = \"https://codehelp-apis.vercel.app/api/get-blogs\";\n"],"file":"baseUrl.dev.js"}
