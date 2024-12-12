@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import Header from "../components/Header";
 import BlogDetails from "../components/BlogDetails";
+import { baseUrl } from "../baseUrl";
 
 const BlogPage = () => {
   const [blog, setBlog] = useState(null);
@@ -11,11 +12,11 @@ const BlogPage = () => {
   const navigation = useNavigate();
   const { loading, setLoading } = useContext(AppContext);
   const blogId = location.pathname.split("/").at(-1);
-  
+  const newBaseUrl = "https://codehelp-apis.vercel.app/api/";
 
   async function fetchRelatedBlogs() {
     setLoading(true);
-    let url = `${BaseUrl}get-blog?blogId=${blogId}`;
+    let url = `${newBaseUrl}get-blog?blogId=${blogId}`;
     try {
       const res = await fetch(url);
       const data = await res.json();
